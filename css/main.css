@@ -1,14 +1,18 @@
 body {
-    background-color: gainsboro; 
+    background-color: gainsboro;
     font-family: Montserrat;
-    padding: 0; margin: 0;
+    padding: 0;
+    margin: 0;
+    color: white;
 }
 
 .navbar-side {
     position: absolute;
     display: block;
     width: 150px;
-    background-color: rgb(71, 71, 255);
+    opacity: .9;
+    backdrop-filter: blur(10px);
+    background-color: rgb(0, 83, 214);
     height: 100vh;
 }
 
@@ -96,13 +100,13 @@ body {
     .navbar-side {
         display: none;
     }
-    
+
     .navbar-top {
         position: absolute;
         display: block;
         width: 100vw;
         height: 70px;
-        background-color: rgb(71, 71, 255);
+        background-color: rgb(0, 83, 214);
         display: flex;
     }
 }
@@ -115,37 +119,38 @@ body {
 
 
 .dropdown_menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  perspective: 1000px;
-  display: none;
-  background-color:rgb(71, 71, 255);
-  margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    perspective: 1000px;
+    display: none;
+    background-color: rgb(0, 83, 214);
+    margin: 0;
 
-  padding: 10px 0 20px 0;
+    padding: 10px 0 20px 0;
 }
 
 .dropdown_menu--animated {
-  display: block;
+    display: block;
 }
 
 .dropdown_menu-6 {
-  animation: growDown 300ms ease-in-out forwards;
-  transform-origin: top center;
+    animation: growDown 300ms ease-in-out forwards;
+    transform-origin: top center;
 }
 
 .dropdown_menu-8 {
-  animation: growUp 300ms ease-in-out forwards;
-  transform-origin: top center;
-  display: block !important;
+    animation: growUp 300ms ease-in-out forwards;
+    transform-origin: top center;
+    display: block !important;
 }
 
 @keyframes growDown {
     0% {
         transform: scaleY(0)
     }
+
     100% {
         transform: scaleY(1)
     }
@@ -155,9 +160,9 @@ body {
     0% {
         transform: scaleY(1);
     }
+
     100% {
         transform: scaleY(0);
         display: none;
     }
 }
-   
