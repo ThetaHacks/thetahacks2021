@@ -66,7 +66,12 @@ body {
     transform: translateX(-25px) translateY(-10px);
 }
 
+@media (max-width: 500px) {
+    .remove-mobile {
+        display: none !important;
+    }
 
+}
 
 @media (max-width: 1100px) {
     .navbar-side {
@@ -82,3 +87,12 @@ body {
         display: flex;
     }
 }
+
+.hamburger {
+    position: absolute;
+    right: 15px;
+    top: 6px;
+}
+
+
+   

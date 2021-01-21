@@ -27,6 +27,7 @@
     <!-- CSS -->
 
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/hamburger.css" />
     <link rel="stylesheet" href="fonts/montserrat.css" />
 
 </head>
@@ -49,6 +50,18 @@
                 <img src="img/logo/logo.png" style="width: 22px;">
             </a>
         </div>
-        <div class="nav-element-2-title">thetahacks2021</div>
+        <div class="nav-element-2-title remove-mobile">thetahacks2021</div>
+
+        <div class="hamburger hamburger--spin js-hamburger">
+            <div class="hamburger-box">
+                <div class="hamburger-inner"></div>
+            </div>
+        </div>
+        <script>
+            var hamburger = document.querySelector(".hamburger");
+            hamburger.addEventListener("click", function() {
+            hamburger.classList.toggle("is-active");
+            });
+        </script>
     </div>
 </body>
