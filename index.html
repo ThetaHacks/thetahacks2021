@@ -1,3 +1,4 @@
+<!----------------------- HEADER ----------------------->
 <!DOCTYPE html>
 <html lang="en" prefix="oh: http://ogp.me/ns#">
 <head>
@@ -24,19 +25,23 @@
     <meta property="twitter:image"content=""/>
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="og:url" content="https://thetahacks.tech/" />
-    <!-- CSS -->
 
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/hamburger.css" />
-    <link rel="stylesheet" href="fonts/montserrat.css" />
+    <!----------- CSS ----------->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/hamburger.css" />
+    <link rel="stylesheet" href="assets/fonts/montserrat.css" />
+    <!----------- END CSS ----------->
 
 </head>
+<!----------------------- END HEADER ----------------------->
+
 
 <body id="top">
+    <!----------------------- NAVBAR ----------------------->
     <div class="navbar-side">
         <div class="center" style="width: 60px;">
             <a href="#top">
-                <img src="img/logo/logo.png" style="width: 60px;margin-top: 20px;margin-bottom: 20px;">
+                <img src="assets/img/logo/logo.png" style="width: 60px;margin-top: 20px;margin-bottom: 20px;">
             </a>
         </div>
         <div class="nav-element">Schedule</div>
@@ -47,7 +52,7 @@
     <div class="navbar-top">
         <div style="width: 25px;margin: 10px 15px 10px 30px;">
             <a href="#top">
-                <img src="img/logo/logo.png" style="width: 22px;">
+                <img src="assets/img/logo/logo.png" style="width: 22px;">
             </a>
         </div>
         <div class="nav-element-2-title remove-mobile">thetahacks2021</div>
@@ -64,45 +69,19 @@
             <a class="dropdown_link">Info</a>
         </div>
     </div>
+    <!----------------------- END NAVBAR ----------------------->
 
 
-    <script>
-        var hamburger = document.querySelector(".hamburger");
-        var dropdown = document.querySelector(".dropdown_menu");
-        var body = document.querySelector("#top");
-        var a = 0;
 
-        function getWidth() {
-            return Math.max(
-                document.body.scrollWidth,
-                document.documentElement.scrollWidth,
-                document.body.offsetWidth,
-                document.documentElement.offsetWidth,
-                document.documentElement.clientWidth
-            );
-        }
+    <!----------------------- HOME PAGE ----------------------->
+    <div style="background-color: black;">
+    <img src="assets/img/background/city2.jpg" style="width: 100vw;margin: 0;min-height: 400px;max-height: 700px;object-fit: cover;filter:opacity(0.4);">
+    </div>
+    <!----------------------- ENDHOME PAGE ----------------------->
 
-        hamburger.addEventListener("click", function() {
-            if(a < 2) {
-                a += 1;
-            }
-            hamburger.classList.toggle("is-active");
-            dropdown.classList.toggle("dropdown_menu--animated");
-            dropdown.classList.toggle("dropdown_menu-6");
-            if(a > 1) {
-                dropdown.classList.toggle("dropdown_menu-8");
-            }
-        });
 
-        function reportWindowSize() {
-            if(getWidth() > 1100) {
-                if(dropdown.classList.contains("dropdown_menu-8")) {
-                    dropdown.classList.toggle("dropdown_menu-8");
-                    a = 0;
-                }
-            }
-        }
 
-        window.addEventListener('resize', reportWindowSize);
-    </script>
+    <!----------------------- SCRIPTS ----------------------->
+    <script src="assets/js/main.js"></script>
+    <!----------------------- END SCRIPTS ----------------------->
 </body>
