@@ -33,7 +33,7 @@ body {
     color: white;
     font-size: 1.4rem;
     display: block;
-    padding-bottom: 6px;
+    padding-bottom: 8px;
     padding-top: 6px;
     padding-left: 30px;
 
@@ -48,7 +48,7 @@ body {
 .dropdown_link::before {
     content: '';
     width: 10px;
-    height: 40px;
+    height: 42px;
     display: inline-block;
     position: absolute;
     background-color: gainsboro;
