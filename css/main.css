@@ -28,6 +28,11 @@ body {
     border-bottom: 2px solid gainsboro;
 }
 
+.center {
+    margin: auto;
+    display: block;
+}
+
 .top-nav-element {
     border-top: 2px solid gainsboro;
 }
