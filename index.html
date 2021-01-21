@@ -39,7 +39,7 @@
                 <img src="img/logo/logo.png" style="width: 60px;margin-top: 20px;margin-bottom: 20px;">
             </a>
         </div>
-        <div class="nav-element top-nav-element">Schedule</div>
+        <div class="nav-element">Schedule</div>
         <div class="nav-element">Prizes</div>
         <div class="nav-element">Sponsors</div>
         <div class="nav-element">Info</div>
@@ -57,11 +57,23 @@
                 <div class="hamburger-inner"></div>
             </div>
         </div>
-        <script>
-            var hamburger = document.querySelector(".hamburger");
-            hamburger.addEventListener("click", function() {
-            hamburger.classList.toggle("is-active");
-            });
-        </script>
+        <div class="dropdown_menu dropdown_menu-8">
+            <a class="dropdown_link">Schedule</a>
+            <a class="dropdown_link">Prizes</a>
+            <a class="dropdown_link">Sponsors</a>
+            <a class="dropdown_link">Info</a>
+        </div>
     </div>
+
+
+    <script>
+        var hamburger = document.querySelector(".hamburger");
+        var dropdown = document.querySelector(".dropdown_menu");
+        hamburger.addEventListener("click", function() {
+            hamburger.classList.toggle("is-active");
+            dropdown.classList.toggle("dropdown_menu--animated");
+            dropdown.classList.toggle("dropdown_menu-6");
+            dropdown.classList.toggle("dropdown_menu-8");
+        });
+    </script>
 </body>
