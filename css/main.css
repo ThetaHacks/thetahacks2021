@@ -27,7 +27,7 @@ body {
 
     padding: 10px 0px 10px 15px;
 
-    transition: transform 0.5s ease-out;
+    transition: transform 0.4s ease-out;
 
 }
 
@@ -41,7 +41,7 @@ body {
     padding-top: 6px;
     padding-left: 30px;
 
-    transition: transform 0.5s ease-out;
+    transition: transform 0.4s ease-out;
 }
 
 .dropdown_link:hover {
@@ -81,7 +81,7 @@ body {
 .nav-element::before {
     content: '';
     width: 10px;
-    height: 50px;
+    height: 48px;
     display: inline-block;
     position: absolute;
     background-color: gainsboro;
@@ -106,6 +106,8 @@ body {
         display: block;
         width: 100vw;
         height: 70px;
+        opacity: .9;
+        backdrop-filter: blur(10px);
         background-color: rgb(0, 83, 214);
         display: flex;
     }
@@ -143,7 +145,7 @@ body {
 .dropdown_menu-8 {
     animation: growUp 300ms ease-in-out forwards;
     transform-origin: top center;
-    display: block !important;
+    display: block;
 }
 
 @keyframes growDown {
