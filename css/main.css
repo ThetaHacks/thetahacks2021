@@ -28,6 +28,14 @@ body {
     border-bottom: 2px solid gainsboro;
 }
 
+.nav-element-2-title {
+    display: inline-block;
+    font-family: Montserrat;
+    color: white;
+    font-size: 1.8rem;
+    margin-top: 15px;
+}
+
 .center {
     margin: auto;
     display: block;
@@ -60,7 +68,7 @@ body {
 
 
 
-@media (max-width: 1200px) {
+@media (max-width: 1100px) {
     .navbar-side {
         display: none;
     }
@@ -71,5 +79,6 @@ body {
         width: 100vw;
         height: 70px;
         background-color: rgb(71, 71, 255);
+        display: flex;
     }
 }
