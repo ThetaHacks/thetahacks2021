@@ -10,7 +10,7 @@ body {
     position: fixed;
     display: block;
     width: 150px;
-    background-color: rgba(0, 83, 214, 0.7);
+    background-color: rgba(0, 83, 214);
     height: 100vh;
 
     z-index: 1000;
@@ -51,6 +51,37 @@ body {
     cursor: pointer;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.underline {
+    position: relative;
+    color: rgba(0, 83, 214);
+    text-decoration: none;
+}
+.underline:hover {
+    color: rgb(62, 152, 255);
+}
+.underline:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+.underline::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(62, 152, 255);
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+
 .dropdown_link::before {
     content: '';
     width: 10px;
@@ -60,6 +91,16 @@ body {
     background-color: gainsboro;
 
     transform: translateX(-40px) translateY(-8px);
+}
+
+#navbar-logo {
+    width: 25px;
+    margin: 10px 15px 10px 30px;
+}
+
+#navbar-logo:hover,
+.nav-element-2-title:hover {
+    cursor: pointer !important;
 }
 
 .nav-element-2-title {
@@ -83,7 +124,7 @@ body {
 .nav-element::before {
     content: '';
     width: 10px;
-    height: 48px;
+    height: 100%;
     display: inline-block;
     position: absolute;
     background-color: gainsboro;
@@ -96,22 +137,37 @@ body {
         display: none !important;
     }
 
+
 }
 
 .home-div {
     width: calc(100vw - 150px);
-    padding-top: 30vh;
+    padding-top: calc(30vh - 100px);
     margin-left: 150px;
 }
 
 .home-div-2 {
-    height: 70vh;
+    height: 400px;
+    padding-top: 100px;
+    background: rgba(255, 255, 255, 0.5);
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 
+a:active,
+a:focus {
+  outline: 0 !important;
+  border: none !important;
+  -moz-outline-style: none !important;
+  outline-style: none !important;
+}
 
 .background-img {
-    background: url(../img/background/sky.jpg) no-repeat center center;
+    background: url(../img/background/home.jpg) no-repeat center center;
     position: fixed;
     background-size: cover;
     height: 100vh;
@@ -122,13 +178,27 @@ body {
 .title {
     margin: 0;
     text-align: center;
-    font-size: 6rem;
+    font-size: 5rem;
     color: black;
+    margin-bottom: 10vh;
+}
+
+.title-alt {
+    display: none;
+}
+
+.subtitle {
+    margin: 0;
+    text-align: center;
+    font-size: 1.8rem;
+    color: black;
+    margin-bottom: 15px;
 }
 
 .home-div-other {
     height: 100vh;
-    background-color:rgba(255,255,255, 0.3)
+    background-color:rgba(255,255,255, 0.3);
+    margin-top: calc(70vh - 400px);
 }
 
 @media (max-width: 1100px) {
@@ -141,9 +211,63 @@ body {
         display: block;
         width: 100vw;
         height: 70px;
-        background-color: rgba(0, 83, 214, 0.7);
+        background-color: rgba(0, 83, 214);
         display: flex;
     }
+
+    .home-div {
+        width: calc(100vw);
+        margin-left: 0px !important;
+    }
+
+    .home-div-2 {
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
+
+    .title {
+        display: none;
+    }
+
+    .subtitle {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .title-alt {
+        margin: 0;
+        text-align: center;
+        font-size: 4rem;
+        color: black;
+        margin-bottom: 10vh;
+        display: block;
+    }
+
+}
+
+@media (max-width: 700px) {
+    .title-alt {
+        font-size: 3rem;
+        margin-bottom: 5vh;
+    }
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .home-div-2 {
+        height: 300px;
+        padding-top: 50px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .home-div-other {
+        height: 100vh;
+        background-color:rgba(255,255,255, 0.3);
+        margin-top: calc(70vh - 250px);
+    }
+ 
 }
 
 .hamburger {

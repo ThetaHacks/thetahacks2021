@@ -40,22 +40,34 @@
     <!----------------------- NAVBAR ----------------------->
     <div class="navbar-side">
         <div class="center" style="width: 60px;">
-            <a href="#top">
+            <a href="#top" onclick="home()">
                 <img src="assets/img/logo/logo.png" style="width: 60px;margin-top: 20px;margin-bottom: 20px;">
             </a>
         </div>
-        <div class="nav-element">Schedule</div>
+        <div class="nav-element" onclick="schedule();">Schedule</div>
         <div class="nav-element">Prizes</div>
         <div class="nav-element">Sponsors</div>
-        <div class="nav-element">Info</div>
+        <div class="nav-element">People</div>
+        <div class="nav-element">More Info</div>
+
+        <script>
+            function home() {
+                document.getElementById("schedule").style.display = "none";
+                document.getElementById("home").style.display = "block";
+            }
+            function schedule() {
+                document.getElementById("schedule").style.display = "block";
+                document.getElementById("home").style.display = "none";
+            }
+        </script>
     </div>
     <div class="navbar-top">
-        <div style="width: 25px;margin: 10px 15px 10px 30px;">
+        <div id="navbar-logo" onclick="home()">
             <a href="#top">
                 <img src="assets/img/logo/logo.png" style="width: 22px;">
             </a>
         </div>
-        <div class="nav-element-2-title remove-mobile">thetahacks2021</div>
+        <div class="nav-element-2-title remove-mobile" onclick="home()"><a href="#top">thetahacks2021</a></div>
 
         <div class="hamburger hamburger--spin js-hamburger">
             <div class="hamburger-box">
@@ -63,10 +75,11 @@
             </div>
         </div>
         <div class="dropdown_menu">
-            <a class="dropdown_link">Schedule</a>
+            <a class="dropdown_link" onclick="schedule();">Schedule</a>
             <a class="dropdown_link">Prizes</a>
             <a class="dropdown_link">Sponsors</a>
-            <a class="dropdown_link">Info</a>
+            <a class="dropdown_link">People</a>
+            <a class="dropdown_link">More Info</a>
         </div>
     </div>
     <!----------------------- END NAVBAR ----------------------->
@@ -79,12 +92,24 @@
         <div class="home-div">
             <div class="home-div-2">
                 <h1 class="title">thetahacks2021</h1>
+                <h1 class="title-alt">thetahacks 2021</h1>
+                <h1 class="subtitle">thetahacks2021 is coming soon.</h1>
+                <h1 class="subtitle">join the <a href="https://thetahacks.tech/discord" target="_blank" class="underline">discord</a> and sign up for
+                     <a href="https://form.typeform.com/to/PhePnrTa?typeform-medium=embed-snippet" target="_blank" class="underline">emails</a> to recieve updates!</h1>
             </div>
             <div class="home-div-other"></div>
         </div>
         
     </div>
-    <!----------------------- ENDHOME PAGE ----------------------->
+    <!----------------------- END HOME PAGE ----------------------->
+
+
+    <!----------------------- SCHEDULE PAGE ----------------------->
+    <div id="schedule" style="background-color: black;width: 100vw;display: none;min-height:100vh;">
+        
+        
+    </div>
+    <!----------------------- END SCHEDULE PAGE ----------------------->
 
 
 
