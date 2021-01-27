@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(13, 19, 64);
+    background-color: black;
     font-family: Montserrat;
     padding: 0;
     margin: 0;
@@ -41,7 +41,7 @@ html, body {
 
 .schedule {
     width: calc(100% - 80px);
-    margin: 100px 40px 0px 40px;
+    margin: 100px auto 0px auto;
 
     font-size: 1.6rem;
 
@@ -97,6 +97,8 @@ th {
     background-color: black;width: 100vw;display: none;min-height:100vh;
     width: calc(100vw - 150px);
     height: 100%;
+
+    max-width: 1600px;
 }
 
 .main-logo,
