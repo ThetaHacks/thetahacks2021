@@ -46,6 +46,8 @@ html, body {
     font-size: 1.6rem;
 
     background-color: rgb(13, 19, 64);
+
+    max-width: 850px;
 }
 
 th, td {
