@@ -1,6 +1,6 @@
 
 
-if (!(/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) || !(('ontouchstart' in window)|| (navigator.maxTouchPoints > 0)|| (navigator.msMaxTouchPoints > 0))) {
+if (!(/^((?!chrome|android).)*safari/i.test(navigator.userAgent))) {
     var lastScrollTop = 0;
     var scrolled = false;
     $(window).scroll(function (event) {
