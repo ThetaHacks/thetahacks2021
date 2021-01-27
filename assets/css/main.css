@@ -34,8 +34,26 @@ html, body {
 
     padding: 10px 0px 10px 15px;
 
-    transition: transform 0.4s ease-out;
+    transition: transform 0.3s ease-out;
+    transform-style: preserve-3d;
+}
 
+.main-logo {
+    transition: transform 0.5s ease-in-out;
+}
+
+.main-logo:hover {
+    transform: rotateY(180deg);
+}
+
+@keyframes flip {
+    0% {
+        transform: scaleY(0)
+    }
+
+    100% {
+        transform: scaleY(1)
+    }
 }
 
 .dropdown_link {
@@ -48,11 +66,11 @@ html, body {
     padding-top: 6px;
     padding-left: 30px;
 
-    transition: transform 0.4s ease-out;
+    transition: transform 0.3s ease-out;
 }
 
 .dropdown_link:hover {
-    transform: translateX(10px);
+    transform: translateX(5px);
     cursor: pointer;
 }
 
@@ -89,13 +107,13 @@ a {
 
 .dropdown_link::before {
     content: '';
-    width: 10px;
+    width: 5px;
     height: 42px;
     display: inline-block;
     position: absolute;
     background-color: gainsboro;
 
-    transform: translateX(-40px) translateY(-8px);
+    transform: translateX(-35px) translateY(-8px);
 }
 
 #navbar-logo {
@@ -122,19 +140,19 @@ a {
 }
 
 .nav-element:hover {
-    transform: translateX(10px);
+    transform: translateX(5px);
     cursor: pointer;
 }
 
 .nav-element::before {
     content: '';
-    width: 10px;
+    width: 5px;
     height: 100%;
     display: inline-block;
     position: absolute;
     background-color: gainsboro;
 
-    transform: translateX(-25px) translateY(-10px);
+    transform: translateX(-20px) translateY(-10px);
 }
 
 @media (max-width: 500px) {
