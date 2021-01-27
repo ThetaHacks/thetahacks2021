@@ -1,7 +1,6 @@
-const uA = navigator.userAgent;
-const vendor = navigator.vendor;
 
-if ((!(/^((?!chrome|android).)*safari/i.test(navigator.userAgent))) || (/Safari/i.test(uA) && /Apple Computer/.test(vendor) && !/Mobi|Android/i.test(uA))) {
+
+if (!(/^((?!chrome|android).)*safari/i.test(navigator.userAgent))) {
     var lastScrollTop = 0;
     var scrolled = false;
     $(window).scroll(function (event) {
