@@ -32,6 +32,8 @@ if (!window.mobileCheck()) {
        }
        lastScrollTop = st;
     });
+} else {
+    alert("mobile - testing");
 }
 
 var hamburger = document.querySelector(".hamburger");

@@ -38,6 +38,13 @@ html, body {
     transform-style: preserve-3d;
 }
 
+.main-logo,
+.nav-element,
+.dropdown_link {
+    position: relative;
+    z-index: 100000;
+}
+
 .main-logo {
     transition: transform 0.5s ease-in-out;
 }
