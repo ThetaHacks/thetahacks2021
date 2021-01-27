@@ -16,6 +16,10 @@ if (!(/^((?!chrome|android).)*safari/i.test(navigator.userAgent))) {
         }
         lastScrollTop = st;
     });
+
+    $("head").append(
+        '<link rel="stylesheet" type="text/css" href="assets/css/notsafari.css">'
+    );
 }
 
 

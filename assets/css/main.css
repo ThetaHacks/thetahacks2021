@@ -9,6 +9,7 @@ body {
 html, body {
     overscroll-behavior: none;
     overflow-x: hidden;
+
 }
 
 .navbar-side {
@@ -45,13 +46,6 @@ html, body {
     z-index: 100000;
 }
 
-.main-logo {
-    transition: transform 0.5s ease-in-out;
-}
-
-.main-logo:hover {
-    transform: rotateY(180deg);
-}
 
 @keyframes flip {
     0% {
@@ -293,6 +287,10 @@ a:focus {
         margin-bottom: 15px;
     }
 
+    .description {
+        font-size: 1rem;
+    }
+
     .title-alt {
         margin: 0;
         text-align: center;
@@ -330,6 +328,16 @@ a:focus {
         margin-top: calc(70vh - 250px);
     }
  
+}
+
+@media (max-width: 500px) {
+    .nav-element-2-title {
+        font-size: 1.3rem;
+        margin-top: 22px;
+    }
+    .dropdown_link {
+        font-size: 1.2rem;
+    }
 }
 
 .hamburger {
