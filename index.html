@@ -28,7 +28,6 @@
 
     <!----------- CSS ----------->
     <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/hamburger.css" />
     <link rel="stylesheet" href="assets/fonts/montserrat.css" />
     <!----------- END CSS ----------->
 
@@ -40,34 +39,36 @@
     <!----------------------- NAVBAR ----------------------->
     <div class="navbar-side">
         <div class="center" style="width: 60px;">
-            <a href="#top" onclick="home()">
+            <a href="#top" onclick="goto('home');">
                 <img src="assets/img/logo/logo.png" style="width: 60px;margin-top: 20px;margin-bottom: 20px;">
             </a>
         </div>
-        <div class="nav-element" onclick="schedule();">Schedule</div>
-        <div class="nav-element">Prizes</div>
-        <div class="nav-element">Sponsors</div>
-        <div class="nav-element">People</div>
-        <div class="nav-element">More Info</div>
+        <div class="nav-element" onclick="goto('schedule');">Schedule</div>
+        <div class="nav-element" onclick="goto('prizes');">Prizes</div>
+        <div class="nav-element" onclick="goto('sponsors');">Sponsors</div>
+        <div class="nav-element" onclick="goto('people');">People</div>
+        <div class="nav-element" onclick="goto('info');">More Info</div>
 
         <script>
-            function home() {
+            function goto(i) {
                 document.getElementById("schedule").style.display = "none";
-                document.getElementById("home").style.display = "block";
-            }
-            function schedule() {
-                document.getElementById("schedule").style.display = "block";
+                document.getElementById("prizes").style.display = "none";
+                document.getElementById("sponsors").style.display = "none";
+                document.getElementById("people").style.display = "none";
+                document.getElementById("info").style.display = "none";
                 document.getElementById("home").style.display = "none";
+
+                document.getElementById(i).style.display = "block";
             }
         </script>
     </div>
     <div class="navbar-top">
-        <div id="navbar-logo" onclick="home()">
+        <div id="navbar-logo" onclick="goto('home')">
             <a href="#top">
                 <img src="assets/img/logo/logo.png" style="width: 22px;">
             </a>
         </div>
-        <div class="nav-element-2-title remove-mobile" onclick="home()"><a href="#top">thetahacks2021</a></div>
+        <div class="nav-element-2-title" onclick="goto('home');"><a href="#top">thetahacks2021</a></div>
 
         <div class="hamburger hamburger--spin js-hamburger">
             <div class="hamburger-box">
@@ -75,11 +76,11 @@
             </div>
         </div>
         <div class="dropdown_menu">
-            <a class="dropdown_link" onclick="schedule();">Schedule</a>
-            <a class="dropdown_link">Prizes</a>
-            <a class="dropdown_link">Sponsors</a>
-            <a class="dropdown_link">People</a>
-            <a class="dropdown_link">More Info</a>
+            <a class="dropdown_link" onclick="goto('schedule');">Schedule</a>
+            <a class="dropdown_link" onclick="goto('prizes');">Prizes</a>
+            <a class="dropdown_link" onclick="goto('sponsors');">Sponsors</a>
+            <a class="dropdown_link" onclick="goto('people');">People</a>
+            <a class="dropdown_link" onclick="goto('info');">More Info</a>
         </div>
     </div>
     <!----------------------- END NAVBAR ----------------------->
@@ -87,18 +88,18 @@
 
 
     <!----------------------- HOME PAGE ----------------------->
-    <div id="home">
+    <div id="home" class="snap-container">
         <div class="background-img"></div>
-        <div class="home-div">
+        <div class="home-div snap-child">
             <div class="home-div-2">
                 <h1 class="title">thetahacks2021</h1>
                 <h1 class="title-alt">thetahacks 2021</h1>
                 <h1 class="subtitle">thetahacks2021 is coming soon.</h1>
                 <h1 class="subtitle">join the <a href="https://thetahacks.tech/discord" target="_blank" class="underline">discord</a> and sign up for
-                     <a href="https://form.typeform.com/to/PhePnrTa?typeform-medium=embed-snippet" target="_blank" class="underline">emails</a> to recieve updates!</h1>
+                    <a href="https://form.typeform.com/to/PhePnrTa?typeform-medium=embed-snippet" target="_blank" class="underline">emails</a> to recieve updates!</h1>
             </div>
-            <div class="home-div-other"></div>
         </div>
+        <div class="home-div-other snap-child"></div>
         
     </div>
     <!----------------------- END HOME PAGE ----------------------->
@@ -110,6 +111,34 @@
         
     </div>
     <!----------------------- END SCHEDULE PAGE ----------------------->
+
+    <!----------------------- PRIZES PAGE ----------------------->
+    <div id="prizes" style="background-color: black;width: 100vw;display: none;min-height:100vh;">
+        
+        
+    </div>
+    <!----------------------- END PRIZES PAGE ----------------------->
+
+    <!----------------------- SPONSORS PAGE ----------------------->
+    <div id="sponsors" style="background-color: black;width: 100vw;display: none;min-height:100vh;">
+        
+        
+    </div>
+    <!----------------------- END SPONSORS PAGE ----------------------->
+
+    <!----------------------- PEOPLE PAGE ----------------------->
+    <div id="people" style="background-color: black;width: 100vw;display: none;min-height:100vh;">
+        
+        
+    </div>
+    <!----------------------- END PEOPLE PAGE ----------------------->
+
+    <!----------------------- INFO PAGE ----------------------->
+    <div id="info" style="background-color: black;width: 100vw;display: none;min-height:100vh;">
+        
+        
+    </div>
+    <!----------------------- END INFO PAGE ----------------------->
 
 
 
