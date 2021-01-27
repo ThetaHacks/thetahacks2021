@@ -80,3 +80,6 @@ function goto(i) {
 
     document.getElementById(i).style.display = "block";
 }
+
+
+

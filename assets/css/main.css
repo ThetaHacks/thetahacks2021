@@ -39,6 +39,57 @@ html, body {
     transform-style: preserve-3d;
 }
 
+.schedule {
+    width: calc(100% - 80px);
+    margin: 100px 40px 0px 40px;
+
+    font-size: 1.6rem;
+
+    background-color: rgb(13, 19, 64);
+}
+
+th, td {
+    text-align: center;
+    padding: 15px 0px;
+    font-size: 1.2rem;
+}
+
+
+.table-row {
+    background-color: rgb(4, 5, 86);
+    transition: transform 0.6s ease;
+}
+
+.table-row:hover {
+    cursor: pointer;
+    transform: scaleX(1.04);
+}
+
+th {
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+
+
+.col-2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.col-2-child {
+    min-width: 475px;
+    min-height: 600px;
+}
+
+.page {
+    margin-left: 150px;
+    background-color: black;width: 100vw;display: none;min-height:100vh;
+    width: calc(100vw - 150px);
+    height: 100%;
+}
+
 .main-logo,
 .nav-element,
 .dropdown_link {
@@ -248,9 +299,15 @@ a:focus {
     margin-top: calc(70vh - 400px);
 }
 
+
 @media (max-width: 1100px) {
     .navbar-side {
         display: none;
+    }
+
+    .page {
+        width: 100vw;
+        margin-left: 0;
     }
 
     .navbar-top {
@@ -265,6 +322,11 @@ a:focus {
     .home-div {
         width: calc(100vw);
         margin-left: 0px !important;
+    }
+
+    
+    .col-2-child {
+        min-width: 100vw;
     }
 
     .home-div-other {
@@ -524,3 +586,4 @@ bottom:0;
 transition:bottom .1s ease-out,transform .22s cubic-bezier(.215,.61,.355,1) .12s;
 transform:rotate(90deg)
 }
+
