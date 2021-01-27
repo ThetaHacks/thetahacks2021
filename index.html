@@ -41,21 +41,24 @@
     <div id="top"></div>
     <!----------------------- NAVBAR ----------------------->
     <div class="navbar-side">
-        <div class="center" style="width: 60px;">
-            <a onclick="goto('home');scrollToTop();" class="addcursor" style="width: 60px;">
-                <img class="main-logo" src="assets/img/logo/logo_clear.png" style="width: 60px;margin-top: 40px;margin-bottom: 20px;">
-            </a>
+        <div class="center addcursor" onclick="goto('home');scrollToTop();">
+            <div class="center addcursor" style="width: 60px;" onclick="goto('home');scrollToTop();">
+                <a class="addcursor" style="min-width: 60px;">
+                    <img class="main-logo" src="assets/img/logo/logo_clear.png" style="width: 60px;margin-top: 40px;margin-bottom: 20px;">
+                </a>
+            </div>
         </div>
-        <div class="nav-element" onclick="goto('schedule');">Schedule</div>
-        <div class="nav-element" onclick="goto('prizes');">Prizes</div>
-        <div class="nav-element" onclick="goto('sponsors');">Sponsors</div>
-        <div class="nav-element" onclick="goto('people');">People</div>
-        <div class="nav-element" onclick="goto('info');">More Info</div>
+        <div class="nav-element" onclick="goto('home');scrollToTop();">Home</div>
+        <div class="nav-element" onclick="goto('schedule');scrollToTop();">Schedule</div>
+        <div class="nav-element" onclick="goto('prizes');scrollToTop();">Prizes</div>
+        <div class="nav-element" onclick="goto('sponsors');scrollToTop();">Sponsors</div>
+        <div class="nav-element" onclick="goto('people');scrollToTop();">People</div>
+        <div class="nav-element" onclick="goto('info');scrollToTop();">More Info</div>
         <div class="nav-element" onclick="window.open('https://thetahacks.tech', '_blank');">2020 Site</div>
     </div>
     <div class="navbar-top">
-        <div id="navbar-logo" onclick="goto('home');scrollToTop();" class="addcursor" style="width: 22px;">
-            <a onclick="goto('home');scrollToTop();" class="addcursor">
+        <div id="navbar-logo" onclick="goto('home');scrollToTop();" class="addcursor" style="min-width: 22px;">
+            <a onclick="goto('home');scrollToTop();">
                 <img class="main-logo" src="assets/img/logo/logo_clear.png" style="width: 22px;" id="mainlogo">
             </a>
         </div>
@@ -67,11 +70,12 @@
             </div>
         </div>
         <div class="dropdown_menu">
-            <a class="dropdown_link" onclick="goto('schedule');">Schedule</a>
-            <a class="dropdown_link" onclick="goto('prizes');">Prizes</a>
-            <a class="dropdown_link" onclick="goto('sponsors');">Sponsors</a>
-            <a class="dropdown_link" onclick="goto('people');">People</a>
-            <a class="dropdown_link" onclick="goto('info');">More Info</a>
+            <a class="dropdown_link" onclick="goto('home');scrollToTop();">Home</a>
+            <a class="dropdown_link" onclick="goto('schedule');scrollToTop();">Schedule</a>
+            <a class="dropdown_link" onclick="goto('prizes');scrollToTop();">Prizes</a>
+            <a class="dropdown_link" onclick="goto('sponsors');scrollToTop();">Sponsors</a>
+            <a class="dropdown_link" onclick="goto('people');scrollToTop();">People</a>
+            <a class="dropdown_link" onclick="goto('info');scrollToTop();">More Info</a>
             <a class="dropdown_link" href="https://thetahacks.tech" target="_blank">2020 Site</a>
         </div>
     </div>

@@ -4,17 +4,19 @@ if (!(/^((?!chrome|android).)*safari/i.test(navigator.userAgent))) {
     var lastScrollTop = 0;
     var scrolled = false;
     $(window).scroll(function (event) {
-        var st = $(this).scrollTop();
-        if (st >= lastScrollTop && !scrolled){
-            if ($(document).scrollTop() < $(window).height() && !scrolled) {
-                scrolled = true;
-                console.log($(document).scrollTop());
-            $([document.documentElement, document.body]).animate({
-                scrollTop: $(window).height()
-            }, 300, function () { scrolled = false;});
+        if (document.getElementById("home").style.display != "none") {
+            var st = $(this).scrollTop();
+            if (st >= lastScrollTop && !scrolled) {
+                if ($(document).scrollTop() < $(window).height() && !scrolled) {
+                    scrolled = true;
+                    console.log($(document).scrollTop());
+                    $([document.documentElement, document.body]).animate({
+                        scrollTop: $(window).height()
+                    }, 300, function () { scrolled = false; });
+                }
+            }
+            lastScrollTop = st;
         }
-        }
-        lastScrollTop = st;
     });
 
     $("head").append(
