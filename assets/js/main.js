@@ -91,8 +91,11 @@ var radius = canvas.height / 2;
 console.log(window.innerWidth);
 console.log(radius*2);
 
-if(window.innerWidth < radius*2) {
-    radius = window.innerWidth/2;
+if (window.innerWidth < radius * 2) {
+    document.getElementById("hand").style.marginBottom = 1 * (radius * 2 - window.innerWidth) / 2 + "px";
+    document.getElementById("hand").style.height = (150 - (radius*2 - window.innerWidth)/2) + "px";
+    radius = window.innerWidth / 2;
+    
 } 
 
 console.log(radius*2);
