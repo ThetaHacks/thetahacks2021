@@ -59,6 +59,42 @@ function reportWindowSize() {
             a = 0;
         }
     }
+
+    console.log("r");
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    radius = canvas.height / 2;
+
+
+    if (window.innerWidth < radius * 2) {
+        document.getElementById("hand").style.marginBottom = 1 * (radius * 2 - window.innerWidth) / 2 + "px";
+        document.getElementById("hand").style.height = (150 - (radius*2 - window.innerWidth)/2) + "px";
+        radius = window.innerWidth / 2;
+        
+    } 
+
+    ctx.translate(radius, radius);
+    
+    oradius = radius;
+    radius = radius * 0.90;
+    ctx.arc(0, 0, radius, 0, 2 * Math.PI, true);
+    ctx.fillStyle = "white";
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(0, 0 ,radius * 0.95, 0, 2 * Math.PI);
+    ctx.fillStyle="#000";
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(0, 0, radius * 0.05, 0, 2 * Math.PI);
+    ctx.fillStyle = '#fff';
+    ctx.fill();
+
+    drawNumbers(ctx, radius);
+
+    ctx.translate(-1 * oradius, -1 * oradius);
 }
 
 window.addEventListener('resize', reportWindowSize);
@@ -67,6 +103,7 @@ function scrollToTop() {
     $([document.documentElement, document.body]).animate({
         scrollTop: 0
     }, 300);
+
 }
 
 
@@ -87,11 +124,8 @@ function goto(i) {
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
-ctx.clearRect(0, 0, canvas.width, canvas.height);
 var radius = canvas.height / 2;
 
-console.log(window.innerWidth);
-console.log(radius*2);
 
 if (window.innerWidth < radius * 2) {
     document.getElementById("hand").style.marginBottom = 1 * (radius * 2 - window.innerWidth) / 2 + "px";
@@ -100,12 +134,17 @@ if (window.innerWidth < radius * 2) {
     
 } 
 
-console.log(radius*2);
 ctx.translate(radius, radius);
+
+var oradius = radius;
 radius = radius * 0.90
 drawClock(0, 0);
 
+ctx.translate(-1 * oradius, -1 * oradius);
+
+
 function drawClock(hour, minute) {
+
     ctx.arc(0, 0, radius, 0, 2 * Math.PI, true);
     ctx.fillStyle = "white";
     ctx.fill();
