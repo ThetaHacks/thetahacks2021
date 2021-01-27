@@ -171,18 +171,6 @@ a:focus {
   outline-style: none !important;
 }
 
-.snap-container {
-    scroll-snap-type: y mandatory;
-    overflow: scroll !important;
-    height: 100vh;
-    width: 100vw;
-}
-
-.snap-child {
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-}
-
 .background-img {
     background: url(../img/background/home.jpg) no-repeat center center;
     position: fixed;
