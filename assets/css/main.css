@@ -98,7 +98,14 @@ th {
     width: calc(100vw - 150px);
     height: 100%;
 
-    max-width: 1600px;
+    max-width: 1440px;
+}
+
+@media (min-width: 1590px) {
+    .page {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .main-logo,
