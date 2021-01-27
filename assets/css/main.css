@@ -8,6 +8,7 @@ body {
 
 html, body {
     overscroll-behavior: none;
+    overflow-x: hidden;
 }
 
 .navbar-side {
@@ -144,6 +145,20 @@ a {
 
 }
 
+.description {
+    color: black;
+    text-align: center;
+    margin-bottom: 30vh;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 30px;
+    padding: 20px;
+    margin-top: 0;
+    font-size: 1.6rem;
+
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
 .home-div {
     width: calc(100vw - 150px);
     padding-top: calc(30vh - 100px);
@@ -153,6 +168,7 @@ a {
 .home-div-other {
     margin-left: 150px;
     width: calc(100vw - 150px);
+    padding-top: 100px;
 }    
 
 .home-div-2 {
@@ -210,8 +226,6 @@ a:focus {
 }
 
 .home-div-other {
-    height: 100vh;
-    background-color:rgba(255,255,255, 0.3);
     margin-top: calc(70vh - 400px);
 }
 
@@ -288,8 +302,6 @@ a:focus {
     }
 
     .home-div-other {
-        height: 100vh;
-        background-color:rgba(255,255,255, 0.3);
         margin-top: calc(70vh - 250px);
     }
  
