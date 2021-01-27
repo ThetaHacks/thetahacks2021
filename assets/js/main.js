@@ -35,3 +35,38 @@ function reportWindowSize() {
 }
 
 window.addEventListener('resize', reportWindowSize);
+
+function scrollToTop() {
+    $([document.documentElement, document.body]).animate({
+        scrollTop: 0
+    }, 300);
+}
+
+
+var lastScrollTop = 0;
+var scrolled = false;
+$(window).scroll(function (event) {
+   var st = $(this).scrollTop();
+   if (st >= lastScrollTop && !scrolled){
+       if ($(document).scrollTop() < $(window).height() && !scrolled) {
+           scrolled = true;
+           console.log($(document).scrollTop());
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $(window).height()
+        }, 300, function () { scrolled = false;});
+    }
+   }
+   lastScrollTop = st;
+});
+
+
+function goto(i) {
+    document.getElementById("schedule").style.display = "none";
+    document.getElementById("prizes").style.display = "none";
+    document.getElementById("sponsors").style.display = "none";
+    document.getElementById("people").style.display = "none";
+    document.getElementById("info").style.display = "none";
+    document.getElementById("home").style.display = "none";
+
+    document.getElementById(i).style.display = "block";
+}
